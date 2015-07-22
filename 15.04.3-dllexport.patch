@@ -1,0 +1,11 @@
+--- origsrc/konsole-15.04.3/src/KeyboardTranslator.h	2015-05-30 06:45:09.000000000 -0500
++++ src/konsole-15.04.3/src/KeyboardTranslator.h	2015-07-21 20:50:59.822206500 -0500
+@@ -119,7 +119,7 @@ public:
+      * and the character sequence and commands associated with it for a particular
+      * KeyboardTranslator.
+      */
+-    class Entry
++    class KONSOLEPRIVATE_EXPORT Entry
+     {
+     public:
+         /**

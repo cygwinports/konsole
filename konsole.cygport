@@ -1,30 +1,36 @@
-inherit kde4
+inherit kf5
 
 NAME="konsole"
-VERSION=4.14.3
-RELEASE=2
+VERSION=15.04.3
+RELEASE=1
 CATEGORY="KDE"
 SUMMARY="KDE terminal emulator"
 DESCRIPTION="Konsole is an X terminal emulator, often referred to as a terminal
 or a shell. It emulates a command line interface in a text only window."
 
-PKG_NAMES="konsole konsole4-part"
+PATCH_URI="15.04.3-dllexport.patch"
+
+PKG_NAMES="konsole konsole5-part"
 konsole_CONTENTS="
-	usr/bin/cygkdeinit4_konsole.dll
+	usr/bin/cygkdeinit5_konsole.dll
 	usr/bin/konsole.exe
 	usr/bin/konsoleprofile
-	usr/share/applications/kde4/konsole.desktop
+	usr/share/applications/org.kde.konsole.desktop
+	usr/share/appdata/org.kde.konsole.appdata.xml
 	usr/share/doc/HTML/en/konsole/
-	usr/share/kde4/services/ServiceMenus/konsole*.desktop
+	usr/share/knotifications5/konsole.notifyrc
+	usr/share/kservices5/ServiceMenus/konsole*.desktop
+	usr/share/kxmlgui5/konsole/konsoleui.rc
+	usr/share/kxmlgui5/konsole/sessionui.rc
 "
-konsole4_part_SUMMARY="KDE 4 embedded terminal KPart"
-konsole4_part_CONTENTS="
-	usr/bin/cygkonsoleprivate.dll
-	usr/lib/kde4/libkonsolepart.dll
+konsole5_part_SUMMARY="KDE 5 embedded terminal KPart"
+konsole5_part_CONTENTS="
+	usr/bin/cygkonsoleprivate-*.dll
+	${QT5_PLUGINSDIR#/}/konsolepart.dll
 	usr/share/doc/konsole/
-	usr/share/kde4/apps/kconf_update/konsole*
-	usr/share/kde4/apps/konsole/
-	usr/share/kde4/services/konsolepart.desktop
-	usr/share/kde4/servicetypes/terminalemulator.desktop
+	usr/share/konsole/
+	usr/share/kservices5/konsolepart.desktop
+	usr/share/kservicetypes5/terminalemulator.desktop
+	usr/share/kxmlgui5/konsole/partui.rc
 "
 PKG_IGNORE="usr/lib/libkonsoleprivate.dll.a"
