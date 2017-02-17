@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="konsole"
-VERSION=15.04.3
+VERSION=16.08.3
 RELEASE=1
 CATEGORY="KDE"
 SUMMARY="KDE terminal emulator"
@@ -16,12 +16,10 @@ konsole_CONTENTS="
 	usr/bin/konsole.exe
 	usr/bin/konsoleprofile
 	usr/share/applications/org.kde.konsole.desktop
-	usr/share/appdata/org.kde.konsole.appdata.xml
 	usr/share/doc/HTML/en/konsole/
 	usr/share/knotifications5/konsole.notifyrc
 	usr/share/kservices5/ServiceMenus/konsole*.desktop
-	usr/share/kxmlgui5/konsole/konsoleui.rc
-	usr/share/kxmlgui5/konsole/sessionui.rc
+	usr/share/metainfo/org.kde.konsole.appdata.xml
 "
 konsole5_part_SUMMARY="KDE 5 embedded terminal KPart"
 konsole5_part_CONTENTS="
@@ -31,6 +29,5 @@ konsole5_part_CONTENTS="
 	usr/share/konsole/
 	usr/share/kservices5/konsolepart.desktop
 	usr/share/kservicetypes5/terminalemulator.desktop
-	usr/share/kxmlgui5/konsole/partui.rc
 "
 PKG_IGNORE="usr/lib/libkonsoleprivate.dll.a"
