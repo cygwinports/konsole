@@ -1,14 +1,17 @@
 inherit kf5
 
 NAME="konsole"
-VERSION=17.04.3
+VERSION=17.08.3
 RELEASE=1
 CATEGORY="KDE"
 SUMMARY="KDE terminal emulator"
 DESCRIPTION="Konsole is an X terminal emulator, often referred to as a terminal
 or a shell. It emulates a command line interface in a text only window."
 
-PATCH_URI="15.04.3-dllexport.patch"
+PATCH_URI="
+	15.04.3-dllexport.patch
+	17.08-ftm.patch
+"
 
 PKG_NAMES="konsole konsole5-part"
 konsole_CONTENTS="

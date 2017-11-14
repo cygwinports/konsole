@@ -1,0 +1,11 @@
+--- origsrc/konsole-17.08.3/CMakeLists.txt	2017-11-06 19:07:53.000000000 -0600
++++ src/konsole-17.08.3/CMakeLists.txt	2017-11-13 12:56:12.356042600 -0600
+@@ -68,7 +68,7 @@ add_definitions(
+ 
+ set(CMAKE_CXX_STANDARD 11)
+ set(CMAKE_CXX_STANDARD_REQUIRED ON)
+-set(CMAKE_CXX_EXTENSIONS OFF)
++set(CMAKE_CXX_EXTENSIONS ON)
+ 
+ include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} )
+ 
